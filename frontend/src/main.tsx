@@ -11,6 +11,10 @@ import posthog from 'posthog-js';
 import { PostHogProvider } from 'posthog-js/react';
 // Import modal type definitions
 import './types/modals';
+import { initTauriBackend } from './lib/tauri-adapter';
+
+// Initialize Tauri adapter for desktop environment
+initTauriBackend();
 
 import {
   useLocation,
